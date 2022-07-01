@@ -117,6 +117,19 @@ enabled = true
 enabled = false
 {% endif %}
 
+# Unified Alerting
+[unified_alerting]
+{% if grafana_unified_alerting != {} %}
+enabled = true
+{%   for k,v in grafana_unified_alerting.items() %}
+{%     if k != 'enabled' %}
+{{ k }} = {{ v }}
+{%     endif %}
+{%   endfor %}
+{% else %}
+enabled = false
+{% endif %}
+
 # SMTP and email config
 {% if grafana_smtp != {} %}
 [smtp]
@@ -194,4 +207,10 @@ provider = {{ grafana_image_storage.provider }}
 {%   for k,v in grafana_panels.items() %}
 {{ k }} = {{ v }}
 {%   endfor %}
+{% endif %}
+
+# Features toggles
+{% if grafana_feature_toggles != [] %}
+[feature_toggles]
+enable = {{ grafana_feature_toggles|join(' ') }}
 {% endif %}

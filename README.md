@@ -47,6 +47,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `grafana_analytics` | {} | Google [analytics](http://docs.grafana.org/installation/configuration/#analytics) configuration section |
 | `grafana_smtp` | {} | [smtp](http://docs.grafana.org/installation/configuration/#smtp) configuration section |
 | `grafana_alerting` | {} | [alerting](http://docs.grafana.org/installation/configuration/#alerting) configuration section |
+| `grafana_unified_alerting` | {} | [alerting](https://grafana.com/docs/grafana/latest/setup-grafana/configure-grafana/#unified_alerting) configuration section |
 | `grafana_log` | {} | [log](http://docs.grafana.org/installation/configuration/#log) configuration section |
 | `grafana_metrics` | {} | [metrics](http://docs.grafana.org/installation/configuration/#metrics) configuration section |
 | `grafana_tracing` | {} | [tracing](http://docs.grafana.org/installation/configuration/#tracing) configuration section |
@@ -58,6 +59,7 @@ All variables which can be overridden are stored in [defaults/main.yml](defaults
 | `grafana_environment` | {} | Optional Environment param for Grafana installation, useful ie for setting http_proxy |
 | `grafana_plugins` | [] |  List of Grafana plugins which should be installed |
 | `grafana_alert_notifications` | [] | List of alert notification channels to be created, updated, or deleted |
+| `grafana_feature_toggles` | [] | [feature toggles](https://grafana.com/docs/grafana/latest/packages_api/data/featuretoggles/#featuretoggles-interface) options |  List of Grafana alpha features to enable/disable |
 
 Datasource example:
 
