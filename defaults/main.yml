@@ -157,6 +157,10 @@ grafana_alerting:
 #  nodata_or_nullvalues: 'no_data'
 #  concurrent_render_limit: 5
 
+# Enable grafana unified Alerting
+# Ref: https://grafana.com/docs/grafana/latest/alerting/migrating-alerts/
+grafana_unified_alerting: {}
+
 # Grafana logging configuration
 grafana_log:
 # mode: 'console file'
@@ -252,3 +256,9 @@ grafana_environment: {}
 grafana_panels: {}
 #  disable_sanitize_html: false
 #  enable_alpha: false
+
+# Feature Toggles
+# Ref: 
+
+grafana_feature_toggles: []
+#  - tempoServiceGraph
