@@ -1,17 +1,19 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-    name: ansible-role-grafana
-    title: Ansible Role Grafana
-    description: Ansible role to install and configure grafana web app
-    namespace: stone
-    tags:
-        - ansible
-        - iac-library
-        - observability
-    annotations:
-      legacy.stone.tech/owner-email: foundation.observability@stone.com.br
+  name: ansible-role-grafana
+  title: Ansible Role Grafana
+  description: Ansible role to install and configure grafana web app
+  namespace: stone
+  tags:
+    - ansible
+    - iac-library
+    - observability
+  annotations:
+    legacy.stone.tech/owner-email: foundation.observability@stone.com.br
+    grafana/dashboard-selector: DORA
+    oculus.stone.tech/configured: "true"
 spec:
-    type: library
-    lifecycle: production
-    owner: stone-payments/foundation-platform-observability
+  type: library
+  lifecycle: production
+  owner: stone-payments/foundation-platform-observability
