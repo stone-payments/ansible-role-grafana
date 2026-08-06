@@ -169,6 +169,22 @@ prefix = {{ grafana_metrics.graphite.prefix }}
 enabled = false
 {% endif %}
 
+# Usage Insights
+{% if grafana_usage_insights_export != {} %}
+[usage_insights.export]
+{%   for k,v in grafana_usage_insights_export.items() %}
+{{ k }} = {{ v }}
+{%   endfor %}
+{% endif %}
+
+# Insights Loki Backend
+{% if grafana_usage_insights_export != {} and grafana_usage_insights_export_loki != {} and grafana_usage_insights_export.storage == "loki"  %}
+[usage_insights.export.storage.loki]
+{%   for k,v in grafana_usage_insights_export_loki.items() %}
+{{ k }} = {{ v }}
+{%   endfor %}
+{% endif %}
+
 # Tracing
 {% if grafana_tracing != {} %}
 [tracing.jaeger]

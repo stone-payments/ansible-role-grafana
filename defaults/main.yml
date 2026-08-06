@@ -180,6 +180,10 @@ grafana_tracing: {}
 #  sampler_type: const
 #  sampler_param: 1
 
+grafana_usage_insights_export: {}
+
+grafana_usage_insights_export_loki: {}
+
 grafana_snapshots: {}
 #  external_enabled: true
 #  external_snapshot_url: "https://snapshots-origin.raintank.io"
